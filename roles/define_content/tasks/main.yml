@@ -1,0 +1,8 @@
+---
+# tasks file for define_content
+- name: Print hostnames together with registered variables.
+  shell: cat "{{ path  }}"
+  register: result
+
+- debug:
+    msg: "Hostname {{ inventory_hostname }}  have the 'path' variable value is {{ result.stdout }}"

@@ -1,0 +1,14 @@
+---
+- name: Create a empty file with 0500 permission
+  hosts: iaas
+  become: yes
+
+  roles:
+    - creating_a_empty_file
+   
+- name: Define content as variable and printing hostnames
+  hosts: all
+  become: yes
+  
+  roles:
+    - define_content

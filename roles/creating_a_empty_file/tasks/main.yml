@@ -1,0 +1,7 @@
+---
+# tasks file for creating_a_empty_file
+- name: Create a empty file.
+  file:
+    dest: "{{ path }}"
+    state: touch
+    mode : "{{mode}}"
