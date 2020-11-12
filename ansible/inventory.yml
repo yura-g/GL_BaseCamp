@@ -1,0 +1,17 @@
+[gl_iaac01]
+centos7-test01 ansible_ssh_host=192.168.214.132 
+
+[gl_iaac02]
+centos7-test02 ansible_ssh_host=192.168.214.133
+
+[gl_iaac03]
+centos7-test03 ansible_ssh_host=192.168.214.134
+
+[gl_iaac04]
+centos7-test04 ansible_ssh_host=192.168.214.135
+
+[iaas:children]
+gl_iaac01
+gl_iaac02
+
+

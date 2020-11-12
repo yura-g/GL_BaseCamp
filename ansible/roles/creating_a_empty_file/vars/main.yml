@@ -1,0 +1,5 @@
+---
+# vars file for creating_a_empty_file
+
+path: "/etc/iaac"
+mode: "0500"
