@@ -1,0 +1,19 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+ name: readinessprobe-v1
+spec:
+ containers:
+   - image: yuriig/readinessprobe:v3
+     name: readinessprobe-v1
+     ports:
+       - containerPort: 3000
+         protocol: TCP
+     readinessProbe:
+       httpGet:
+         path: /
+         port: 3000
+       timeoutSeconds: 2
+       initialDelaySeconds: 5
+       failureThreshold: 3

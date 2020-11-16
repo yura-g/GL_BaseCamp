@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: readinessprobe
+spec:
+ containers:
+   - image: afakharany/node_delayed
+     name: readinessprobe
+     ports:
+       - containerPort: 3000
+         protocol: TCP
+     readinessProbe:
+       httpGet:
+         path: /
+         port: 3000
+       timeoutSeconds: 2
